@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Form from './Form';
 
 let secondsTxt;
 
@@ -27,6 +28,7 @@ const Timer = ({ getQuote }) => {
 
     return (
         <div>
+            <Form setSeconds={setSeconds} />
             <h3>Next quote in <span> {("00" + secondsTxt).slice(-3)} </span> seconds</h3>
         </div>
     )

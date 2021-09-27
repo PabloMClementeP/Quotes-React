@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Timer from './Timer'
 
+
 const Breaking = () => {
 
-    const [quote, setQuote] = useState({
-        text:"",
-        auth:""
-    });
+    const [quote, setQuote] = useState({});
+    const [error, setError] = useState(false);
 
     
-    async function getQuote(){
+    const getQuote = async() =>{
         try {
+            setError(false);
             let res = await fetch("https://www.breakingbadapi.com/api/quote/random"),
                 json = await res.json();
             if(!res.ok) throw {
@@ -18,12 +18,10 @@ const Breaking = () => {
                 statusText: res.statusText
             }
             
-            setQuote({
-                text: json[0].quote,
-                auth: json[0].author
-            });
+            setQuote(json[0]);
+
         } catch (err) {
-            let message = err.statusText || "Error getting the quote";
+            setError(true);
         } finally{
 
         }
@@ -38,8 +36,9 @@ const Breaking = () => {
         <div>
             <h3>Breaking Bad Quote</h3>
             <Timer getQuote={getQuote}/>
-            <h3>{quote.text}</h3>
-            <h2>{quote.auth}</h2>
+            {error ? <p>Error getting the quote</p> : null}
+            <h4>{quote.quote}</h4>
+            <p>-{quote.author}</p>
         </div>
     )
 }
