@@ -10,17 +10,27 @@ import Nav from './components/Nav';
 import Quotes from './components/Quotes';
 import Footer from './components/Footer';
 import styled from '@emotion/styled';
+import breakpoints from './commons/breakpoints'
+
 
 const Contenedor = styled.div`
-  max-width: 80%;
   margin: 0 auto;
 `;
 
 const TitleHeader = styled.h1`
   font-family: 'Pacifico', cursive;
-  font-size: 70px;
+  font-size: 40px;
   color: #ecf0f1;
   text-align: center;
+  
+  @media screen and  (${breakpoints.device.sm}){
+        font-size: 55px;
+  }
+  
+  @media screen and (${breakpoints.device.lg}){
+    font-size: 75px;
+  }
+
 `;
 
 function App() {

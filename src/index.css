@@ -9,6 +9,7 @@ body {
 
   background-color: hsl(210, 29%, 13%);
 
+  height: 100vh;
 }
 
 code {
