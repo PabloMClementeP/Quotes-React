@@ -4,10 +4,8 @@ import styled from '@emotion/styled';
 const FooterText = styled.p`
     text-align: center;
     color: #ecf0f1;
-    width: 80%;
     height: 50px;
-    bottom: 0px;
-    position: fixed;
+    margin-top: 50px;
 `;
 
 const Footer = () => {

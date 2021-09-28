@@ -23,11 +23,11 @@ const TitleHeader = styled.h1`
   color: #ecf0f1;
   text-align: center;
   
-  @media screen and  (${breakpoints.device.sm}){
+  @media only screen and (${breakpoints.device.sm}){
         font-size: 55px;
   }
   
-  @media screen and (${breakpoints.device.lg}){
+  @media only screen and (${breakpoints.device.lg}){
     font-size: 75px;
   }
 

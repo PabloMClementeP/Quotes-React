@@ -9,11 +9,11 @@ const SubTitleStyled = styled.h2`
     color: #016169;
     margin: 50px 0;
 
-    @media screen and  (${breakpoints.device.sm}){
+    @media only screen and  (${breakpoints.device.sm}){
         font-size: 3.5rem;
     }
   
-    @media screen and (${breakpoints.device.lg}){
+    @media only screen and (${breakpoints.device.lg}){
         font-size: 5rem;
     }
 
