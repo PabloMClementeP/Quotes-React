@@ -14,7 +14,7 @@ Built With:
  - css styles with styled component
 
 ## Link
-[Link to deployed page](https://react-quotesapp.netlify.app/breaking)
+[Link to deployed page](https://react-quotesapp.herokuapp.com/)
 
 ## Contact
 Pablo Clemente - pclementep@gmail.com
