@@ -1,19 +1,45 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from '@emotion/styled';
+
+const NavStyle = styled.nav`
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+`;
+
+const ButtonStyled = styled.button`
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #00838F;
+    color: #FFF;
+    width: 210px;
+    transition: background-color .3s ease;
+
+    &:hover{
+        background-color: #22b2c5;
+        cursor: pointer;
+    }
+`;
 
 const Nav = () => {
     return (
-        <nav>
+        <NavStyle>
             <NavLink to="/">
-                <button>Home</button>
+                <ButtonStyled>Home</ButtonStyled>
             </NavLink>
             <NavLink to="/quotes">
-                <button>Quotes API</button>
+                <ButtonStyled>Famous Characters</ButtonStyled>
             </NavLink>
             <NavLink to="/breaking">
-                <button>BreakingBad Quotes</button>
+                <ButtonStyled>Breaking Bad</ButtonStyled>
             </NavLink>
-        </nav>
+        </NavStyle>
     )
 }
 
